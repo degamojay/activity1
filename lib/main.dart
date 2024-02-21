@@ -5,6 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // ignore: use_key_in_widget_constructors
   const MyApp({Key? key});
 
   @override
@@ -12,137 +13,256 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: const Color(0xFF000668),
+          // ignore: prefer_const_constructors
+          color: Color.fromARGB(255, 2, 5, 69),
           child:  Align(
             alignment: Alignment.topCenter,
             child: Padding(
-              padding: const EdgeInsets.all(80.0),
+              padding: const EdgeInsets.only(top: 60.0),
             child: Column(
                 children: [
+                  Stack(
+                    alignment: Alignment.topRight,
+                    children: <Widget>[
                   Container(
-                    width: 200,
-                    height: 200, 
+                    width: double.infinity,
+                    height: 150, 
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                         image: AssetImage('images/chris.jpg'), 
                       ),
                     ),
+                  ), 
+                  const Positioned(top: 0, right: 0, 
+                  child: Icon(
+                    Icons.close,
+                    color: Colors.grey,
+                    size: 40.0,
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 20, width: double.infinity), 
                   const Text(
                     'Chris Montgomery', 
-                    style: TextStyle(color: Colors.yellow, fontSize: 26),
+                    style: TextStyle(color: Color.fromARGB(255, 255, 216, 59), fontSize: 34, fontFamily: 'Times New Roman'
+                    ),
                   ),
                   const Text(
                     'New York', 
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'Roboto'
+                    ),
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 55
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20), 
+                      Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),
+                      
                       Icon(
                         Icons.person, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width:
-                              10), 
+                      SizedBox(width: 16.0,
+                      ),
                       Text(
-                        'UserDetails',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        'User Details',
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
+                  ),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 6.0),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                        indent: 10,
+                        endIndent: 10,
+                      )
+                    ],
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 6
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20), 
+                       Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),
+                      
                       Icon(
                         Icons.history, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width:
-                              10), 
+                      SizedBox(width: 16.0,
+                      ), 
                       Text(
                         'History',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
+                  ),
+                   const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 6.0),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                        indent: 10,
+                        endIndent: 10,
+                      )
+                    ],
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 6
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20), 
+                       Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),
+                      
                       Icon(
                         Icons.book_online, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width: 10), 
+                      SizedBox(width: 16.0,
+                      ), 
                       Text(
                         'Booking Details',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
+                  ),
+                   const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 6.0),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                        indent: 10,
+                        endIndent: 10,
+                      )
+                    ],
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 6
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20), 
+                       Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),         
                       Icon(
                         Icons.email, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width: 10), 
+                      SizedBox(width: 10,
+                      ), 
                       Text(
                         'Contact Us',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'Roboto'),
                       ),
                     ],
+                  ),
+                   const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 6.0),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                        indent: 10,
+                        endIndent: 10,
+                      )
+                    ],
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 6
+                    ),
                   ),
                   const Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20),
+                       Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),
+                      
                       Icon(
                         Icons.share, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width: 10), 
+                      SizedBox(width: 16.0,
+                      ), 
                       Text(
                         'Share this app',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
+                  ),
+                   const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 6.0),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.grey,
+                        indent: 10,
+                        endIndent: 10,
+                      )
+                    ],
+                  ),
+                  const Padding(padding: EdgeInsets.only(bottom: 6
+                    ),
                   ),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      SizedBox(width: 20), 
+                       Padding(padding: EdgeInsets.only(left: 10.0),
+                      ),
                       Icon(
                         Icons.help, 
-                        color: Colors.yellow,
+                        color: Color.fromARGB(255, 255, 216, 59),
                         size: 30,
                       ),
-                      SizedBox(
-                          width: 10), 
+                      SizedBox(width: 16.0,
+                      ), 
                       Text(
                         'Help',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 18, fontFamily: 'Roboto'),
                       ),
                     ],
                   ),
+                   // ignore: sized_box_for_whitespace
+                   Container(
+                    height: 80, 
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Sign Out',
+                          style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'Roboto'),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
