@@ -2,5 +2,5 @@
 
 A simple static, stateless widget exercise.
 
-![Image Name](images/resultImage.jpg)
+![Image](images/resultImage.jpg)
 
